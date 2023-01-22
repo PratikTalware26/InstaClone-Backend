@@ -37,7 +37,7 @@ router.post("/posts", (req, res) => {
     const { author, location, description } = req.body;
     const image = req.files.image
     // console.log(image.name)
-    image.mv("../Backend/Image/" + image.name, async (err)=>{
+    image.mv("./Image/" + image.name, async (err)=>{
 
       if(err){
         return res.json({message:err});
