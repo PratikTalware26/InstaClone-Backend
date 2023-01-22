@@ -19,7 +19,7 @@ mongoose.connect(uri, (err)=>{
 
 const app= express();
 app.use(cors())
-const port= 8080;
+const port= 8080 || process.env.PORT;
 
 app.use("/", cors(), postRoute)
 
